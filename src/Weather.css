@@ -1,0 +1,51 @@
+.Weather {
+  font-family: "Montserrat", sans-serif;
+  border: 1px solid #006ec5;
+  border-radius: 10px;
+  padding: 16px;
+
+  color: #006ec5;
+}
+
+.Weather h1 {
+  font-size: 35px;
+  font-weight: 350;
+  line-height: 29px;
+  margin: 20px 0 10px 0;
+}
+
+.Weather ul {
+  margin: 0;
+  padding: 0;
+}
+
+.Weather li {
+  font-size: 16px;
+  line-height: 19px;
+  list-style: none;
+}
+
+.Weather img {
+  height: 64px;
+  width: 64px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.Weather .temperature {
+  font-weight: bold;
+  color: #202124;
+  font-size: 55px;
+  font-weight: 400;
+  line-height: 64px;
+}
+
+.Weather .unit {
+  color: #202124;
+  font-size: 16px;
+  font-weight: 400;
+  position: relative;
+  line-height: 1;
+  top: -22px;
+  margin-left: 5px;
+}
