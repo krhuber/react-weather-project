@@ -17,13 +17,16 @@ export default function WeatherInfo(props) {
         <div className="col-6">
           <div className="clearfix">
             <div className="float-left">
-              <WeatherIcon
-                iconCode={props.data.icon}
-                alt={props.data.description}
-              />
-              <span>
-                <UnitConversion fahrenheit={props.data.temperature} />
-              </span>
+              <div className="d-flex align-items-center">
+                <WeatherIcon
+                  iconCode={props.data.icon}
+                  alt={props.data.description}
+                  size={64}
+                />
+                <span>
+                  <UnitConversion fahrenheit={props.data.temperature} />
+                </span>
+              </div>
             </div>
           </div>
         </div>
