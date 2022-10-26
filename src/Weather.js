@@ -9,22 +9,23 @@ export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
   const [city, setCity] = useState(props.defaultCity);
   function handleResponse(response) {
+    console.log(response.data);
     setWeatherData({
       ready: true,
-      city: response.data.name,
-      date: new Date(response.data.dt * 1000),
-      description: response.data.weather[0].description,
-      temperature: response.data.main.temp,
-      humidity: response.data.main.humidity,
+      city: response.data.city,
+      date: new Date(response.data.time * 1000),
+      description: response.data.condition.description,
+      temperature: response.data.temperature.current,
+      humidity: response.data.temperature.humidity,
       wind: response.data.wind.speed,
-      feelsLike: response.data.main.feels_like,
-      icon: response.data.weather[0].icon,
+      feelsLike: response.data.temperature.feels_like,
+      icon: response.data.condition.icon,
     });
   }
 
   function search() {
-    let apiKey = "84101301d1e855bff406380c1296fbbf";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+    let apiKey = "t9bfof0abe24f22230d475698a8418f5";
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=imperial`;
 
     axios.get(apiUrl).then(handleResponse);
   }
