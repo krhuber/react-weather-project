@@ -5,7 +5,7 @@ import UnitConversion from "./UnitConversion";
 
 export default function WeatherInfo(props) {
   return (
-    <div className="WeatherInfo">
+    <div className="WeatherInfo text-center mt-4">
       <h1>{props.data.city}</h1>
       <ul>
         <li>
@@ -13,7 +13,7 @@ export default function WeatherInfo(props) {
         </li>
         <li className="text-capitalize">{props.data.description}</li>
       </ul>
-      <div className="row mt-3">
+      <div className="row mt-4">
         <div className="col-6">
           <div className="clearfix">
             <div className="float-left">

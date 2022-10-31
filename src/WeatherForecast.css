@@ -1,6 +1,11 @@
 .WeatherForecast {
   text-align: center;
 }
+.WeatherForecast h2 {
+  font-size: 40px;
+  margin: 25px 0 15px 0;
+}
+
 .WeatherForecast-temperature-max {
   margin-right: 3px;
   font-size: 14px;
