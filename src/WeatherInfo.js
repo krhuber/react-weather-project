@@ -23,7 +23,7 @@ export default function WeatherInfo(props) {
                   alt={props.data.description}
                   size={64}
                 />
-                <span>
+                <span className="float-left">
                   <UnitConversion fahrenheit={props.data.temperature} />
                 </span>
               </div>

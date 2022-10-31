@@ -12,7 +12,7 @@ export default function Weather(props) {
     setWeatherData({
       ready: true,
       city: response.data.city,
-      corrdinates: response.data.coordinates,
+      coordinates: response.data.coordinates,
       date: new Date(response.data.time * 1000),
       description: response.data.condition.description,
       temperature: response.data.temperature.current,
@@ -67,8 +67,9 @@ export default function Weather(props) {
         </form>
         <WeatherInfo data={weatherData} />
         <WeatherForecast
-          //key={`corrdinates${weatherData.corrdinates.latitude}_${weatherData.corrdinates.longitude}`}
-          corrdinates={weatherData.corrdinates}
+          //Another way to have the forecast updated when the coordinates change
+          //key={`coordinates${weatherData.coordinates.latitude}_${weatherData.coordinates.longitude}`}
+          coordinates={weatherData.coordinates}
         />
       </div>
     );
