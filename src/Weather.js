@@ -67,7 +67,7 @@ export default function Weather(props) {
         </form>
         <WeatherInfo data={weatherData} />
         <WeatherForecast
-          key={`corrdinates${weatherData.corrdinates.latitude}_${weatherData.corrdinates.longitude}`}
+          //key={`corrdinates${weatherData.corrdinates.latitude}_${weatherData.corrdinates.longitude}`}
           corrdinates={weatherData.corrdinates}
         />
       </div>
